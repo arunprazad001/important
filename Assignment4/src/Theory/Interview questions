@@ -1,0 +1,72 @@
+1. WHAT IS THE NEED FOR THREADS IN JAVA?
+
+Threads allows a program to operate more efficiently by doing multiple things at the same time.
+ Threads can be used to perform complicated tasks in the background without interrupting the
+  main program.
+  
+ 2. HOW DO YOU CREATE A THREAD?
+ 
+ You can create threads by implementing the runnable interface and overriding the run() method.
+  Then, you can create a thread object and call the start() method. 
+  Thread Class: The Thread class provides constructors and methods for
+   creating and operating on threads. 
+   
+ 3. HOW DO YOU CREATE A THREAD BY EXTENDING THREAD CLASS?  
+  
+ Create a thread by a new class that extends Thread class and create an instance of that class.
+  The extending class must override run() method which is the entry point of new thread. 
+  In this case, we must override the run() and then use the start() 
+  method to start and run the thread.
+  
+ 4. HOW DO YOU CREATE A THREAD BY IMPLEMENTING RUNNABLE INTERFACE?
+ 
+ To use the Runnable interface to create and start a thread, you have to do the following:
+Create a class that implements Runnable .
+Provide a run method in the Runnable class.
+Create an instance of the Thread class and pass your Runnable object to its constructor as a parameter.
+Call the Thread object's start method.
+
+5. HOW DO YOU RUN A THREAD IN JAVA?
+
+Thread thread = new Thread(); To start the Java thread you will call its start() method,
+ like this: thread. start();
+ 
+ 6. WHAT ARE THE DIFFERENT STATES OF A THREAD?
+ 
+ Life-cycle of a Thread (State of a thread):
+In Java, a thread always exists in any one of the following states. These states are:
+1. New state
+2. Runnable state
+3. Running state
+4. Blocked state
+5. Dead state
+
+7. WHAT IS PRIORITY OF A THREAD? HOW DO YOU CHANGE THE PRIORITY OF
+A THREAD?
+
+The setPriority() method of thread class is used to change the thread's priority.
+ Every thread has a priority which is represented by the integer number between 1 to 10.
+  Thread class provides 3 constant properties: public static int MIN_PRIORITY: 
+  It is the maximum priority of a thread.
+  
+8 .WHAT IS EXECUTORSERVICE?
+
+ExecutorService is a JDK API that simplifies running tasks in asynchronous mode. 
+Generally speaking, ExecutorService automatically provides a pool of threads
+and an API for assigning tasks to it.
+
+10. EXPLAIN DIFFERENT WAYS OF CREATING EXECUTOR SERVICES ?
+
+We can assign tasks to the ExecutorService using several methods including execute(),
+ which is inherited from the Executor interface, and also submit(), invokeAny() and invokeAll().
+  
+  11. HOW DO YOU CHECK WHETHER AN EXECUTIONSERVICE TASK EXECUTED
+SUCCESSFULLY?
+  
+  The Java ExecutorService submit(Runnable) method also takes a Runnable implementation, 
+  but returns a Future object. This Future object can be used to check if the Runnable 
+  has finished executing.
+  
+
+ 
+
